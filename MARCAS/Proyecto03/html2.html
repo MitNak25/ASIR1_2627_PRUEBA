@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>La decisión de tu vida</title>
+</head>
+<body>
+
+<table cellpadding="10" cellspacing="0" width="600" align="center">
+    <tr>
+        <td colspan="3" align="center">
+            <h1>La decisión de tu vida</h1>
+            <a href="https://fundacionaquae.org" target="_blank">
+                <img src="https://fundacionaquae.org" width="500">
+            </a>
+        </td>
+    </tr>
+    <tr align="center">
+        <td width="33%">
+            <audio id="sonido1" src="http://d21c.com" preload="auto"></audio>
+            <a href="premio.html" onclick="reproducirYIr(event, 'sonido1', 'premio.html')">
+                <img src="https://imagedelivery.net" width="150">
+            </a>
+            <br>
+            Agua sin Gas
+        </td>
+        <td width="33%">
+            <audio id="sonido2" src="https://superluigibros.com" preload="auto"></audio>
+            <a href="castigo1.html" onclick="reproducirYIr(event, 'sonido2', 'castigo1.html')">
+                <img src="https://e-leclerc.es" width="150">
+            </a>
+            <br>
+            Agua con Gas
+        </td>
+        <td width="33%">
+            <audio id="sonido3" src="https://superluigibros.com" preload="auto"></audio>
+            <a href="castigo2.html" onclick="reproducirYIr(event, 'sonido3', 'castigo2.html')">
+                <img src="https://elcorteingles.es" width="150">
+            </a>
+            <br>
+            Agua con limon
+        </td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+function reproducirYIr(evento, idAudio, urlDestino) {
+    evento.preventDefault(); 
+    var elementoAudio = document.getElementById(idAudio);
+    elementoAudio.onended = function() {
+        window.location.href = urlDestino;
+    };
+    elementoAudio.play().catch(function() {
+        window.location.href = urlDestino;
+    });
+}
+</script>
+
+</body>
+</html>
